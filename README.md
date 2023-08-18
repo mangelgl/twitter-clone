@@ -9,8 +9,17 @@
 
 ## Requisitos
 
-- **PHP**: *sudo apt install php8.1*
-- **Composer**: https://getcomposer.org/download/
+PHP
+```
+sudo apt install php8.1
+```
+Composer
+```
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+```
 
 ## Adicional
 
@@ -18,8 +27,18 @@
 
 ## Pasos
 
-- Crear un proyecto: *composer create-project laravel/laravel <example-app>
-- En el directorio, usar la sentencia *php artisan serve* y *npm run dev* (para iniciar tailwind)
+1. Crear un proyecto
+```
+composer create-project laravel/laravel <example-app>
+```
+
+2. Comandos de inicio
+```
+php artisan serve
+```
+```
+npm run dev
+```
 
 ## Directory Structure
 
@@ -33,12 +52,3 @@
 - **storage**: logs, plantillas Blade compiladas, ficheros de sesiones, ficheros de caché y otros ficheros generados por laravel.
 - **tests**: test automatizados.
 - **vendor**: dependencias de Composer
-
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
